@@ -1,0 +1,26 @@
+form:
+    label:
+        email: E-mail
+
+action:
+    save: Save
+    logout: Log out
+
+notification:
+    data_save:
+        success: Data saved successfully
+        error: There was an error saving data
+
+auth:
+    form:
+        label:
+            password: Password
+    action:
+        login: Login
+
+    title:
+        login: Login
+
+sidebar:
+    label:
+        dashboard: Dashboard

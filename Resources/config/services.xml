@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+         http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service class="Scriber\Bundle\AdminPanelBundle\Menu\SidebarMenuBuilder" id="Scriber\Bundle\AdminPanelBundle\Menu\SidebarMenuBuilder">
+            <argument type="service" id="event_dispatcher" />
+            <argument type="service" id="router.default" />
+            <argument type="service" id="translator.default" />
+            <tag name="rzeka_menu" />
+        </service>
+
+        <service class="Scriber\Bundle\AdminPanelBundle\Menu\TopMenuBuilder" id="Scriber\Bundle\AdminPanelBundle\Menu\TopMenuBuilder">
+            <argument type="service" id="event_dispatcher" />
+            <tag name="rzeka_menu" />
+        </service>
+
+        <service class="Scriber\Bundle\AdminPanelBundle\EventListener\MenuActiveLinkListener" id="Scriber\Bundle\AdminPanelBundle\EventListener\MenuActiveLinkListener">
+            <argument type="service" id="request_stack" />
+            <tag name="kernel.event_listener" event="Scriber\Bundle\AdminPanelBundle\Event\SidebarMenuFinishBuildEvent" method="onMenuFinish" />
+            <tag name="kernel.event_listener" event="Scriber\Bundle\AdminPanelBundle\Event\TopMenuFinishBuildEvent" method="onMenuFinish" />
+        </service>
+    </services>
+</container>

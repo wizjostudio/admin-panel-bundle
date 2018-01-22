@@ -1,0 +1,58 @@
+html, body {
+    overflow-x: hidden;
+}
+
+.border-none {
+    border-color: transparent;
+}
+
+.card {
+    &.bg-transparent {
+        .card-header,
+        .card-footer,
+        .card-body {
+            background-color: transparent !important;
+        }
+    }
+
+    &.bg-transparent.border-none {
+        .card-header,
+        .card-footer,
+        .card-body {
+            padding-left: 0;
+            padding-right: 0;
+
+        }
+    }
+}
+
+.btn-link {
+    border-color: transparent !important;
+}
+
+#notifications {
+    z-index: 1000;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 100%;
+
+    .alert {
+        position: relative;
+    }
+
+    .notification-enter-active, .notification-leave-active {
+        transition: all .5s;
+    }
+
+    .notification-enter, .notification-leave-to /* .fade-leave-active below version 2.1.8 */ {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+.close {
+    .material-icons {
+        font-size: 20px;
+    }
+}

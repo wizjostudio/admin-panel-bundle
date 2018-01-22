@@ -1,0 +1,53 @@
+{% trans_default_domain 'admin' %}
+{% extends '@ScriberAdminPanel/admin.html.twig' %}
+
+{% block sidebar_items '' %}
+{% block top_right_nav_items '' %}
+{% block content %}
+    <div class="row">
+        <div class="col-12 col-sm-8 offset-sm-2 col-md-4 offset-md-4">
+            {% if error %}
+                <div class="alert alert-danger" role="alert">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+
+            <form action="{{ path('scriber_admin_panel_login') }}" method="post">
+                <div class="card bg-transparent border-none">
+                    <div class="card-header">
+                        <div>{{ 'auth.title.login'|trans }}</div>
+                    </div>
+                    <div class="card-body">
+                        <fieldset role="group" class="b-form-group form-group">
+                            <div role="group">
+                                <label for="username">{{ 'form.label.email'|trans }}</label>
+                                <input id="form-email"
+                                       type="email"
+                                       required="required"
+                                       aria-required="true"
+                                       class="form-control"
+                                       name="_username"
+                                       value="{{ username }}"/>
+                            </div>
+                        </fieldset>
+                        <fieldset role="group" class="b-form-group form-group">
+                            <div role="group">
+                                <label for="password">{{ 'auth.form.label.password'|trans }}</label>
+                                <input id="password"
+                                       type="password"
+                                       required="required"
+                                       aria-required="true"
+                                       class="form-control"/>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="card-footer">
+                        <div>
+                            <button type="submit" class="btn btn-primary">
+                                {{ 'auth.action.login'|trans }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

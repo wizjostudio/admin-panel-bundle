@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+         http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service id="scriber_admin_panel.controller.login" class="Scriber\Bundle\AdminPanelBundle\Controller\LoginController" public="true">
+            <argument type="service" id="twig" />
+            <argument type="service" id="security.authentication_utils" />
+        </service>
+
+        <service id="scriber_admin_panel.controller.base" class="Scriber\Bundle\AdminPanelBundle\Controller\AdminPanelController" public="true">
+            <argument type="service" id="twig" />
+        </service>
+    </services>
+</container>
