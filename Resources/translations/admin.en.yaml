@@ -11,6 +11,8 @@ notification:
         success: Data saved successfully
         error: There was an error saving data
 
+    unknown_error: An unknown error occured
+
 auth:
     form:
         label:
