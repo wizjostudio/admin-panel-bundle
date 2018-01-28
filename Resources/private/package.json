@@ -3,22 +3,24 @@
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
+  "private": true,
   "dependencies": {
     "babel-preset-react": "^6.24.1",
-    "bazinga-translator": "^2.6.5",
-    "prop-types": "^15.6.0",
-    "vue": "^2.5.13",
-    "vue-loader": "^13.7.0",
-    "vue-template-compiler": "^2.5.13"
+    "prop-types": "^15.6.0"
   },
   "devDependencies": {
     "@symfony/webpack-encore": "^0.17.1",
     "axios": "^0.17.1",
+    "bazinga-translator": "^2.6.5",
     "bootstrap": "^4.0.0",
-    "bootstrap-vue": "^1.4.1",
+    "bootstrap-vue": "^2.0.0-rc.0",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
-    "vue-router": "^3.0.1"
+    "vue": "^2.5.13",
+    "vue-loader": "^13.7.0",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.5.13",
+    "vuex": "^3.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
