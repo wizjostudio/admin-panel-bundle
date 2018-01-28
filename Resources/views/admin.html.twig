@@ -83,6 +83,9 @@
 <script src="{{ asset('scriberadminpanel/manifest.js', 'scriber_admin_panel') }}"></script>
 <script src="{{ asset('scriberadminpanel/vendor.js', 'scriber_admin_panel') }}"></script>
 <script src="{{ path('scriber_js_translation_dump', {page: 'default', locale: app.request.locale, _format: 'js'}) }}"></script>
+{% if scriber.admin_base_url is defined %}
+<script>$Scriber.baseUrl = '{{ scriber.admin_base_url }}';</script>
+{% endif %}
 {% include '@ScriberAdminPanel/partial/footer.html.twig' %}
 {% block js_footer '' %}
 </body>
