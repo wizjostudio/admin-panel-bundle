@@ -19,7 +19,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder(): TreeBuilder
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('scriber_core');
+        $rootNode = $treeBuilder->root('scriber_admin_panel');
 
         return $treeBuilder;
     }
