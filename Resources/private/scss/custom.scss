@@ -51,8 +51,24 @@ html, body {
     }
 }
 
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
+
 .close {
     .material-icons {
         font-size: 20px;
+    }
+}
+
+.data-loading {
+    transition: opacity .2s;
+
+    &-on {
+        opacity: 0.3;
+        pointer-events: none;
     }
 }

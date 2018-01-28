@@ -1,6 +1,9 @@
 import axios from 'axios'
 import Vue from 'vue'
 import Translator from 'bazinga-translator'
+import BootstrapVue from 'bootstrap-vue'
+import VueRouter from 'vue-router'
+import Vuex from 'vuex'
 
 import $Scriber from './Scriber'
 
@@ -16,9 +19,23 @@ sidebarToggle.addEventListener('click', e => {
   html.classList.toggle('nav-open')
 })
 
-$Scriber.$t = Vue.prototype.$t = Translator
+Translator.defaultDomain = 'admin'
+
+Vue.use(BootstrapVue)
+Vue.use(VueRouter)
+Vue.use(Vuex)
+
+Vue.use({
+  install: (Vue, options) => {
+    Vue.prototype.$t = Translator
+    Vue.prototype.$http = axios
+    Vue.prototype.$Scriber = $Scriber
+  }
+});
 
 global.Vue = Vue
 global.axios = axios
 global.$Scriber = $Scriber
 global.Translator = Translator
+global.VueRouter = VueRouter
+global.Vuex = Vuex

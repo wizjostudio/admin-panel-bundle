@@ -52,7 +52,7 @@
 
     }
     .card-category,
-    label{
+    label:not(.custom-control-label){
         font-size: $font-size-base;
         font-weight: $font-weight-normal;
         color: $dark-gray;
@@ -63,7 +63,7 @@
         }
     }
 
-    label{
+    label:not(.custom-control-label){
         font-size: $font-size-small;
         margin-bottom: 5px;
         text-transform: uppercase;

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import $Scriber from '../Scriber'
+import Translator from 'bazinga-translator'
 
 class Form {
   constructor(fields, autoNotification) {
@@ -86,7 +86,7 @@ class Form {
         if (this.autoNotification) {
           $Scriber.notifications.addNotification(
             'success',
-            $Scriber.$t.trans('notification.data_save.success'),
+            Translator.trans('notification.data_save.success'),
             'check'
           )
         }
@@ -105,7 +105,7 @@ class Form {
         if (this.autoNotification) {
           $Scriber.notifications.addNotification(
             'danger',
-            $Scriber.$t.trans('notification.data_save.error'),
+            Translator.trans('notification.data_save.error'),
             'close'
           )
         }

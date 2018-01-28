@@ -1,8 +1,8 @@
 import Notifications from './notifications/main'
+import Form from './helper/form'
 
 const $Scriber = {
-  baseUrl: '/admin',
-  csrfToken: null
+  baseUrl: '/admin'
 };
 
 $Scriber.getUrl = (path) => {
@@ -10,6 +10,6 @@ $Scriber.getUrl = (path) => {
 }
 
 $Scriber.notifications = Notifications
-$Scriber.$t = Translator
+$Scriber.form = Form
 
 export default $Scriber

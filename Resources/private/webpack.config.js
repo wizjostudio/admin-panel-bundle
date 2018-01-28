@@ -15,10 +15,14 @@ Encore
     'vue',
     'bootstrap-vue',
     'axios',
+    'vuex',
+    'vue-router',
 
     './js/global.js',
 
     'bootstrap/scss/bootstrap.scss',
+    'bootstrap-vue/dist/bootstrap-vue.css',
+
     './scss/light-bootstrap-dashboard.scss',
     './scss/custom.scss'
   ]);
