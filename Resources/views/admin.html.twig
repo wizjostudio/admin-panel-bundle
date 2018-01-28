@@ -12,6 +12,8 @@
 
     <link href="{{ asset('scriberadminpanel/vendor.css', 'scriber_admin_panel') }}" rel="stylesheet" />
 
+    {% include '@ScriberAdminPanel/partial/head.html.twig' %}
+
     {% block css '' %}
     {% block js_header '' %}
 </head>
@@ -86,6 +88,7 @@
 <script src="{{ asset('scriberadminpanel/manifest.js', 'scriber_admin_panel') }}"></script>
 <script src="{{ asset('scriberadminpanel/vendor.js', 'scriber_admin_panel') }}"></script>
 <script>Translator.defaultDomain = 'admin';</script>
+{% include '@ScriberAdminPanel/partial/footer.html.twig' %}
 {% block js_footer '' %}
 </body>
 </html>
