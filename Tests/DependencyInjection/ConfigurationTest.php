@@ -9,7 +9,7 @@ class ConfigurationTest extends TestCase
 {
     public function testGetConfigTreeBuilder()
     {
-        $root = 'scriber_core';
+        $root = 'scriber_admin_panel';
 
         $configuration = new Configuration();
 
