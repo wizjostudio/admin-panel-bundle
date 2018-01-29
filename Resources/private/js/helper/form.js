@@ -2,9 +2,14 @@ import axios from 'axios'
 import Translator from 'bazinga-translator'
 
 class Form {
-  constructor(fields, autoNotification) {
+  constructor(fields, autoNotification, loadedTimeout) {
     this.validated = false
     this.loading = false
+
+    this.loadedTimeout = parseInt(loadedTimeout)
+    if (isNaN(this.loadedTimeout) || this.loadedTimeout < 0) {
+      this.loadedTimeout = 0
+    }
 
     this.autoNotification = autoNotification
 
@@ -80,8 +85,17 @@ class Form {
       })
       .then(response => {
         this.clearErrors()
-        this.loading = false
-        this.validated = true
+
+        this.validated = false
+
+        if (this.loadedTimeout > 0) {
+          setTimeout(
+            () => {
+              this.loaded()
+            },
+            this.loadedTimeout
+          )
+        }
 
         if (this.autoNotification) {
           $Scriber.notifications.addNotification(
@@ -102,6 +116,9 @@ class Form {
           })
         }
 
+        this.loading = false
+        this.validated = true
+
         if (this.autoNotification) {
           $Scriber.notifications.addNotification(
             'danger',
@@ -109,13 +126,14 @@ class Form {
             'close'
           )
         }
+
         reject(error)
       })
-      .finally(() => {
-        this.loading = false
-        this.validated = true
-      })
     })
+  }
+
+  loaded() {
+    this.loading = false
   }
 }
 
