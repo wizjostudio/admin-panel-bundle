@@ -85,7 +85,9 @@ class Form {
       })
       .then(response => {
         this.clearErrors()
-        this.validated = true
+
+        this.validated = false
+
         if (this.loadedTimeout > 0) {
           setTimeout(
             () => {
@@ -114,6 +116,9 @@ class Form {
           })
         }
 
+        this.loading = false
+        this.validated = true
+
         if (this.autoNotification) {
           $Scriber.notifications.addNotification(
             'danger',
@@ -121,11 +126,8 @@ class Form {
             'close'
           )
         }
+
         reject(error)
-      })
-      .finally(() => {
-        this.loading = false
-        this.validated = true
       })
     })
   }
