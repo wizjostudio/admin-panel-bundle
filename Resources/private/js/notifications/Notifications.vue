@@ -32,12 +32,11 @@
           title: title,
           show: true,
         }
-        console.log(timeout);
+
         if (timeout === undefined) {
           timeout = this.timeout
         }
 
-        console.log(timeout);
         if (timeout > 0) {
           setTimeout(() => {
             notification.show = false
