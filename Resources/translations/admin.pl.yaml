@@ -1,0 +1,28 @@
+form:
+    label:
+        email: E-mail
+
+action:
+    save: Zapisz
+    logout: Wyloguj
+
+notification:
+    data_save:
+        success: Dane zapisane
+        error: Wystąpił błąd podczas zapisu
+
+    unknown_error: Wystąpił nieoczekiwany błąd
+
+auth:
+    form:
+        label:
+            password: Hasło
+    action:
+        login: Login
+
+    title:
+        login: Logowanie
+
+sidebar:
+    label:
+        dashboard: Panel
