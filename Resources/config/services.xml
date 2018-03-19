@@ -4,22 +4,22 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services
          http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <service class="Scriber\Bundle\AdminPanelBundle\Menu\SidebarMenuBuilder" id="Scriber\Bundle\AdminPanelBundle\Menu\SidebarMenuBuilder">
+        <service class="Wizjo\Bundle\AdminPanelBundle\Menu\SidebarMenuBuilder" id="Wizjo\Bundle\AdminPanelBundle\Menu\SidebarMenuBuilder">
             <argument type="service" id="event_dispatcher" />
             <argument type="service" id="router.default" />
             <argument type="service" id="translator.default" />
             <tag name="rzeka_menu" />
         </service>
 
-        <service class="Scriber\Bundle\AdminPanelBundle\Menu\TopMenuBuilder" id="Scriber\Bundle\AdminPanelBundle\Menu\TopMenuBuilder">
+        <service class="Wizjo\Bundle\AdminPanelBundle\Menu\TopMenuBuilder" id="Wizjo\Bundle\AdminPanelBundle\Menu\TopMenuBuilder">
             <argument type="service" id="event_dispatcher" />
             <tag name="rzeka_menu" />
         </service>
 
-        <service class="Scriber\Bundle\AdminPanelBundle\EventListener\MenuActiveLinkListener" id="Scriber\Bundle\AdminPanelBundle\EventListener\MenuActiveLinkListener">
+        <service class="Wizjo\Bundle\AdminPanelBundle\EventListener\MenuActiveLinkListener" id="Wizjo\Bundle\AdminPanelBundle\EventListener\MenuActiveLinkListener">
             <argument type="service" id="request_stack" />
-            <tag name="kernel.event_listener" event="Scriber\Bundle\AdminPanelBundle\Event\SidebarMenuFinishBuildEvent" method="onMenuFinish" />
-            <tag name="kernel.event_listener" event="Scriber\Bundle\AdminPanelBundle\Event\TopMenuFinishBuildEvent" method="onMenuFinish" />
+            <tag name="kernel.event_listener" event="Wizjo\Bundle\AdminPanelBundle\Event\SidebarMenuFinishBuildEvent" method="onMenuFinish" />
+            <tag name="kernel.event_listener" event="Wizjo\Bundle\AdminPanelBundle\Event\TopMenuFinishBuildEvent" method="onMenuFinish" />
         </service>
     </services>
 </container>
