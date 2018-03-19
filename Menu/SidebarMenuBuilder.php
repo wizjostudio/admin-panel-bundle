@@ -1,15 +1,14 @@
 <?php
-namespace Scriber\Bundle\AdminPanelBundle\Menu;
+namespace Wizjo\Bundle\AdminPanelBundle\Menu;
 
 use Rzeka\Menu\MenuItem;
 use Rzeka\Menu\MenuItemInterface;
 use Rzeka\MenuBundle\Menu\MenuBuilderInterface;
-use Scriber\Bundle\AdminPanelBundle\Event\SidebarMenuBottomBuildEvent;
-use Scriber\Bundle\AdminPanelBundle\Event\SidebarMenuFinishBuildEvent;
-use Scriber\Bundle\AdminPanelBundle\Event\SidebarMenuTopBuildEvent;
+use Wizjo\Bundle\AdminPanelBundle\Event\SidebarMenuBottomBuildEvent;
+use Wizjo\Bundle\AdminPanelBundle\Event\SidebarMenuFinishBuildEvent;
+use Wizjo\Bundle\AdminPanelBundle\Event\SidebarMenuTopBuildEvent;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
-use Symfony\Component\Routing\Matcher\UrlMatcherInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 
 class SidebarMenuBuilder implements MenuBuilderInterface
@@ -53,7 +52,7 @@ class SidebarMenuBuilder implements MenuBuilderInterface
 
         $dashboard = MenuItemFactory::createNewItem(
             $this->translator->trans('sidebar.label.dashboard', [], 'admin'),
-            $this->router->generate('scriber_admin_panel_dashboard'),
+            $this->router->generate('wizjo_admin_panel_dashboard'),
             ['icon' => 'dashboard']
         );
         $menu->addChild($dashboard);
@@ -75,6 +74,6 @@ class SidebarMenuBuilder implements MenuBuilderInterface
 
     public function getName(): string
     {
-        return 'scriber_admin_panel.sidebar';
+        return 'wizjo_admin_panel.sidebar';
     }
 }

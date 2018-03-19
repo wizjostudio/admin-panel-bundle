@@ -1,5 +1,5 @@
 <?php
-namespace Scriber\Bundle\AdminPanelBundle\Event;
+namespace Wizjo\Bundle\AdminPanelBundle\Event;
 
 class SidebarMenuFinishBuildEvent extends AbstractMenuBuildEvent
 {

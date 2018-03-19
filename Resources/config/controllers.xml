@@ -4,12 +4,12 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services
          http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <service id="scriber_admin_panel.controller.login" class="Scriber\Bundle\AdminPanelBundle\Controller\LoginController" public="true">
+        <service id="wizjo_admin_panel.controller.login" class="Scriber\Bundle\AdminPanelBundle\Controller\LoginController" public="true">
             <argument type="service" id="twig" />
             <argument type="service" id="security.authentication_utils" />
         </service>
 
-        <service id="scriber_admin_panel.controller.base" class="Scriber\Bundle\AdminPanelBundle\Controller\AdminPanelController" public="true">
+        <service id="wizjo_admin_panel.controller.base" class="Scriber\Bundle\AdminPanelBundle\Controller\AdminPanelController" public="true">
             <argument type="service" id="twig" />
         </service>
     </services>

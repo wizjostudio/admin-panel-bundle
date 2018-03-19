@@ -1,5 +1,5 @@
 <?php
-namespace Scriber\Bundle\AdminPanelBundle\DependencyInjection;
+namespace Wizjo\Bundle\AdminPanelBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
@@ -11,7 +11,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * @link http://symfony.com/doc/current/cookbook/bundles/extension.html
  */
-class ScriberAdminPanelExtension extends Extension
+class WizjoAdminPanelExtension extends Extension
 {
     /**
      * {@inheritdoc}

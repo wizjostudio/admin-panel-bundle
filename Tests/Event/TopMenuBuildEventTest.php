@@ -1,10 +1,10 @@
 <?php
-namespace Scriber\Bundle\AdminPanelBundle\Tests\Event;
+namespace Wizjo\Bundle\AdminPanelBundle\Tests\Event;
 
 use PHPUnit\Framework\TestCase;
 use Rzeka\Menu\MenuItemInterface;
-use Scriber\Bundle\AdminPanelBundle\Event\AbstractMenuBuildEvent;
-use Scriber\Bundle\AdminPanelBundle\Event\TopMenuBuildEvent;
+use Wizjo\Bundle\AdminPanelBundle\Event\AbstractMenuBuildEvent;
+use Wizjo\Bundle\AdminPanelBundle\Event\TopMenuBuildEvent;
 
 class TopMenuBuildEventTest extends TestCase
 {

@@ -2,11 +2,11 @@ var Encore = require('@symfony/webpack-encore');
 
 Encore
   .setOutputPath('../public/build')
-  .setPublicPath('/bundles/scriberadminpanel/build')
+  .setPublicPath('/bundles/wizjoadminpanel/build')
 
   .enableSourceMaps(!Encore.isProduction())
   .cleanupOutputBeforeBuild()
-  .setManifestKeyPrefix('scriberadminpanel')
+  .setManifestKeyPrefix('wizjoadminpanel')
   .enableVersioning()
 
   .enableSassLoader()

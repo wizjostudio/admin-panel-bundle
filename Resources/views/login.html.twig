@@ -1,5 +1,5 @@
 {% trans_default_domain 'admin' %}
-{% extends '@ScriberAdminPanel/admin.html.twig' %}
+{% extends '@WizjoAdminPanel/admin.html.twig' %}
 
 {% block sidebar_items '' %}
 {% block top_right_nav_items '' %}
@@ -10,7 +10,7 @@
                 <div class="alert alert-danger" role="alert">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
             {% endif %}
 
-            <form action="{{ path('scriber_admin_panel_login') }}" method="post">
+            <form action="{{ path('wizjo_admin_panel_login') }}" method="post">
                 <div class="card bg-transparent border-none">
                     <div class="card-header">
                         <div>{{ 'auth.title.login'|trans }}</div>

@@ -1,10 +1,10 @@
 <?php
-namespace Scriber\Bundle\AdminPanelBundle\Tests\EventListener;
+namespace Wizjo\Bundle\AdminPanelBundle\Tests\EventListener;
 
 use PHPUnit\Framework\TestCase;
 use Rzeka\Menu\MenuItemInterface;
-use Scriber\Bundle\AdminPanelBundle\Event\AbstractMenuBuildEvent;
-use Scriber\Bundle\AdminPanelBundle\EventListener\MenuActiveLinkListener;
+use Wizjo\Bundle\AdminPanelBundle\Event\AbstractMenuBuildEvent;
+use Wizjo\Bundle\AdminPanelBundle\EventListener\MenuActiveLinkListener;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
 

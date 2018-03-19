@@ -1,5 +1,5 @@
 <?php
-namespace Scriber\Bundle\AdminPanelBundle\Controller;
+namespace Wizjo\Bundle\AdminPanelBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
@@ -39,7 +39,7 @@ class LoginController
 
         return new Response(
             $this->twig->render(
-                '@ScriberAdminPanel/login.html.twig',
+                '@WizjoAdminPanel/login.html.twig',
                 [
                     'username' => $username,
                     'error' => $error

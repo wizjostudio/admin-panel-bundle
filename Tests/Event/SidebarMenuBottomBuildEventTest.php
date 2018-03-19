@@ -1,10 +1,10 @@
 <?php
-namespace Scriber\Bundle\AdminPanelBundle\Test\Event;
+namespace Wizjo\Bundle\AdminPanelBundle\Test\Event;
 
 use PHPUnit\Framework\TestCase;
 use Rzeka\Menu\MenuItemInterface;
-use Scriber\Bundle\AdminPanelBundle\Event\AbstractMenuBuildEvent;
-use Scriber\Bundle\AdminPanelBundle\Event\SidebarMenuBottomBuildEvent;
+use Wizjo\Bundle\AdminPanelBundle\Event\AbstractMenuBuildEvent;
+use Wizjo\Bundle\AdminPanelBundle\Event\SidebarMenuBottomBuildEvent;
 
 class SidebarMenuBottomBuildEventTest extends TestCase
 {

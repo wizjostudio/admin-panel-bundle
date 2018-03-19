@@ -1,12 +1,12 @@
 <?php
-namespace Scriber\Bundle\AdminPanelBundle\Tests\Menu;
+namespace Wizjo\Bundle\AdminPanelBundle\Tests\Menu;
 
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Rzeka\Menu\MenuItemInterface;
-use Scriber\Bundle\AdminPanelBundle\Event\TopMenuBuildEvent;
-use Scriber\Bundle\AdminPanelBundle\Event\TopMenuFinishBuildEvent;
-use Scriber\Bundle\AdminPanelBundle\Menu\TopMenuBuilder;
+use Wizjo\Bundle\AdminPanelBundle\Event\TopMenuBuildEvent;
+use Wizjo\Bundle\AdminPanelBundle\Event\TopMenuFinishBuildEvent;
+use Wizjo\Bundle\AdminPanelBundle\Menu\TopMenuBuilder;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class TopMenuBuilderTest extends TestCase
@@ -16,7 +16,7 @@ class TopMenuBuilderTest extends TestCase
         $dispatcher = $this->createMock(EventDispatcherInterface::class);
         $builder = new TopMenuBuilder($dispatcher);
 
-        static::assertEquals('scriber_admin_panel.top', $builder->getName());
+        static::assertEquals('wizjo_admin_panel.top', $builder->getName());
     }
 
     public function testBuild()
@@ -36,6 +36,6 @@ class TopMenuBuilderTest extends TestCase
         $result = $builder->build();
 
         static::assertInstanceOf(MenuItemInterface::class, $result);
-        static::assertEquals('scriber_admin_panel.top', $result->getTitle());
+        static::assertEquals('wizjo_admin_panel.top', $result->getTitle());
     }
 }

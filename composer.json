@@ -1,5 +1,5 @@
 {
-    "name": "scriber/admin-panel-bundle",
+    "name": "wizjo/admin-panel-bundle",
     "description": "Admin panel bundle for Scriber",
     "type": "symfony-bundle",
     "license": "MIT",
@@ -12,12 +12,12 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Scriber\\Bundle\\AdminPanelBundle\\": ""
+            "Wizjo\\Bundle\\AdminPanelBundle\\": ""
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Scriber\\Bundle\\AdminPanelBundle\\Tests\\": "Tests/"
+            "Wizjo\\Bundle\\AdminPanelBundle\\Tests\\": "Tests/"
         }
     },
     "require": {

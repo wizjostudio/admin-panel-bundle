@@ -1,12 +1,9 @@
 <?php
-namespace Scriber\Bundle\AdminPanelBundle\Tests\Event;
+namespace Wizjo\Bundle\AdminPanelBundle\Tests\Event;
 
-use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Rzeka\Menu\MenuItemInterface;
-use Scriber\Bundle\AdminPanelBundle\Event\AbstractMenuBuildEvent;
-use Scriber\Bundle\CoreBundle\Entity\User;
-use Scriber\Bundle\CoreBundle\Event\User\AbstractUserChangePasswordEvent;
+use Wizjo\Bundle\AdminPanelBundle\Event\AbstractMenuBuildEvent;
 
 class AbstractMenuBuildEventTest extends TestCase
 {

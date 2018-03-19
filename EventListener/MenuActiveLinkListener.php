@@ -1,7 +1,7 @@
 <?php
-namespace Scriber\Bundle\AdminPanelBundle\EventListener;
+namespace Wizjo\Bundle\AdminPanelBundle\EventListener;
 
-use Scriber\Bundle\AdminPanelBundle\Event\AbstractMenuBuildEvent;
+use Wizjo\Bundle\AdminPanelBundle\Event\AbstractMenuBuildEvent;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 class MenuActiveLinkListener

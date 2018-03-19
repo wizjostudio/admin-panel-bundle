@@ -5,14 +5,14 @@
         xsi:schemaLocation="http://symfony.com/schema/routing
         http://symfony.com/schema/routing/routing-1.0.xsd">
 
-    <route id="scriber_admin_panel_login" path="/login">
-        <default key="_controller">scriber_admin_panel.controller.login</default>
+    <route id="wizjo_admin_panel_login" path="/login">
+        <default key="_controller">wizjo_admin_panel.controller.login</default>
     </route>
 
-    <route id="scriber_admin_panel_logout" path="/logout" />
+    <route id="wizjo_admin_panel_logout" path="/logout" />
 
-    <route id="scriber_admin_panel_dashboard" path="/" methods="GET">
-        <default key="_controller">scriber_admin_panel.controller.base</default>
-        <default key="_template">@ScriberAdminPanel/dashboard.html.twig</default>
+    <route id="wizjo_admin_panel_dashboard" path="/" methods="GET">
+        <default key="_controller">wizjo_admin_panel.controller.base</default>
+        <default key="_template">@WizjoAdminPanel/dashboard.html.twig</default>
     </route>
 </routes>

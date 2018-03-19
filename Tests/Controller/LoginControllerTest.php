@@ -1,9 +1,9 @@
 <?php
-namespace Scriber\Bundle\AdminPanelBundle\Tests\Controller;
+namespace Wizjo\Bundle\AdminPanelBundle\Tests\Controller;
 
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use Scriber\Bundle\AdminPanelBundle\Controller\LoginController;
+use Wizjo\Bundle\AdminPanelBundle\Controller\LoginController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
@@ -17,7 +17,7 @@ class LoginControllerTest extends TestCase
         /** @var AuthenticationUtils|MockObject $authUtils */
         $authUtils = $this->createMock(AuthenticationUtils::class);
 
-        $templateFile = '@ScriberAdminPanel/login.html.twig';
+        $templateFile = '@WizjoAdminPanel/login.html.twig';
         $username = 'test';
         $error = 'error';
 

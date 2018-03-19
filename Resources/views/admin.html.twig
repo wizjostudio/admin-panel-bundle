@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200|Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
-    <link href="{{ asset('scriberadminpanel/vendor.css', 'scriber_admin_panel') }}" rel="stylesheet" />
+    <link href="{{ asset('WizjoAdminPanel/vendor.css', 'wizjo_admin_panel') }}" rel="stylesheet" />
 
-    {% include '@ScriberAdminPanel/partial/head.html.twig' %}
+    {% include '@WizjoAdminPanel/partial/head.html.twig' %}
 
     {% block css '' %}
     {% block js_header '' %}
@@ -27,7 +27,7 @@
             {% block sidebar_items %}
                 <ul class="nav nav-mobile-menu"></ul>
                 <ul class="nav">
-                    {% for item in rzeka_menu('scriber_admin_panel.sidebar').children %}
+                    {% for item in rzeka_menu('wizjo_admin_panel.sidebar').children %}
                         <li class="nav-item {% if item.active %}active{% endif %}">
                             <a class="nav-link" href="{{ item.link }}">
                                 {% if item.attributes.icon is defined %}
@@ -40,7 +40,7 @@
                 </ul>
             {% endblock %}
         </div>
-        <div class="sidebar-background" style="background-image: url('{{ asset('bundles/scriberadminpanel/img/sidebar.jpg') }}') "></div>
+        <div class="sidebar-background" style="background-image: url('{{ asset('bundles/WizjoAdminPanel/img/sidebar.jpg') }}') "></div>
     </div>
     <div class="main-panel">
         <nav class="navbar navbar-expand-lg">
@@ -53,7 +53,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navigation">
                     {% block top_right_nav_items %}
                     <ul class="navbar-nav ml-auto">
-                        {% for item in rzeka_menu('scriber_admin_panel.top').children %}
+                        {% for item in rzeka_menu('wizjo_admin_panel.top').children %}
                             <li class="nav-item {% if item.active %}active{% endif %}">
                                 <a class="nav-link" href="{{ item.link }}">
                                     <span class="no-icon">{{ item.title }}</span>
@@ -80,13 +80,13 @@
     </div>
 </div>
 
-<script src="{{ asset('scriberadminpanel/manifest.js', 'scriber_admin_panel') }}"></script>
-<script src="{{ asset('scriberadminpanel/vendor.js', 'scriber_admin_panel') }}"></script>
+<script src="{{ asset('WizjoAdminPanel/manifest.js', 'wizjo_admin_panel') }}"></script>
+<script src="{{ asset('WizjoAdminPanel/vendor.js', 'wizjo_admin_panel') }}"></script>
 <script src="{{ path('scriber_js_translation_dump', {page: 'default', locale: app.request.locale, _format: 'js'}) }}"></script>
 {% if scriber.admin_base_url is defined %}
 <script>$Scriber.baseUrl = '{{ scriber.admin_base_url }}';</script>
 {% endif %}
-{% include '@ScriberAdminPanel/partial/footer.html.twig' %}
+{% include '@WizjoAdminPanel/partial/footer.html.twig' %}
 {% block js_footer '' %}
 </body>
 </html>

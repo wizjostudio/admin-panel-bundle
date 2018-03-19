@@ -1,9 +1,9 @@
 <?php
-namespace Scriber\Bundle\AdminPanelBundle\Tests\Menu;
+namespace Wizjo\Bundle\AdminPanelBundle\Tests\Menu;
 
 use PHPUnit\Framework\TestCase;
 use Rzeka\Menu\MenuItemInterface;
-use Scriber\Bundle\AdminPanelBundle\Menu\MenuItemFactory;
+use Wizjo\Bundle\AdminPanelBundle\Menu\MenuItemFactory;
 
 class MenuItemFactoryTest extends TestCase
 {

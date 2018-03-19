@@ -1,5 +1,5 @@
 <?php
-namespace Scriber\Bundle\AdminPanelBundle\Menu;
+namespace Wizjo\Bundle\AdminPanelBundle\Menu;
 
 use Rzeka\Menu\MenuItem;
 

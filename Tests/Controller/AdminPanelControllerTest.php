@@ -1,9 +1,9 @@
 <?php
-namespace Scriber\Bundle\AdminPanelBundle\Tests\Controller;
+namespace Wizjo\Bundle\AdminPanelBundle\Tests\Controller;
 
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use Scriber\Bundle\AdminPanelBundle\Controller\AdminPanelController;
+use Wizjo\Bundle\AdminPanelBundle\Controller\AdminPanelController;
 use Symfony\Component\HttpFoundation\Response;
 
 class AdminPanelControllerTest extends TestCase

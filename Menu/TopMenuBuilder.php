@@ -1,11 +1,11 @@
 <?php
-namespace Scriber\Bundle\AdminPanelBundle\Menu;
+namespace Wizjo\Bundle\AdminPanelBundle\Menu;
 
 use Rzeka\Menu\MenuItem;
 use Rzeka\Menu\MenuItemInterface;
 use Rzeka\MenuBundle\Menu\MenuBuilderInterface;
-use Scriber\Bundle\AdminPanelBundle\Event\TopMenuBuildEvent;
-use Scriber\Bundle\AdminPanelBundle\Event\TopMenuFinishBuildEvent;
+use Wizjo\Bundle\AdminPanelBundle\Event\TopMenuBuildEvent;
+use Wizjo\Bundle\AdminPanelBundle\Event\TopMenuFinishBuildEvent;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class TopMenuBuilder implements MenuBuilderInterface
@@ -45,6 +45,6 @@ class TopMenuBuilder implements MenuBuilderInterface
 
     public function getName(): string
     {
-        return 'scriber_admin_panel.top';
+        return 'wizjo_admin_panel.top';
     }
 }

@@ -1,8 +1,8 @@
 <?php
-namespace Scriber\Bundle\CoreBundle\Tests\DependencyInjection;
+namespace Wizjo\Bundle\CoreBundle\Tests\DependencyInjection;
 
 use PHPUnit\Framework\TestCase;
-use Scriber\Bundle\AdminPanelBundle\DependencyInjection\ScriberAdminPanelExtension;
+use Wizjo\Bundle\AdminPanelBundle\DependencyInjection\WizjoAdminPanelExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 class ScriberCoreExtensionTest extends TestCase
@@ -26,7 +26,7 @@ class ScriberCoreExtensionTest extends TestCase
             ->method('fileExists')
             ->withConsecutive(...$filesToLoadCallbacks);
 
-        $extension = new ScriberAdminPanelExtension();
+        $extension = new WizjoAdminPanelExtension();
         $extension->load(
             [],
             $container
