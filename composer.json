@@ -21,7 +21,7 @@
         }
     },
     "require": {
-        "rzeka/menu-bundle": "^0.1.1",
+        "rzeka/menu-bundle": "^0.2",
         "symfony/http-kernel": "^4.0",
         "symfony/twig-bundle": "^4.0",
         "symfony/asset": "^4.0",
